@@ -19,11 +19,18 @@ function getHostName(fullHostName) {
     return fullHostName.substring(0, ci);
 }
 
-server.post('/merge', (req, res) => {
-    console.log(req.headers.host);
-    console.log(getHostName(req.headers.host));
+function handleMerge(req, res) {
+    let origin = getHostName(req.headers.host); 
+
+    if (origin !== 'localhost') {
+        res.statusCode = 403;
+        res.end(JSON.stringify({ message: 'wrong origin' }));
+        return;
+    }
     
     res.send(req.body);
-}) ;
+}
+
+server.post('/merge', handleMerge);
 
 server.listen(3000);
