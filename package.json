@@ -1,0 +1,8 @@
+{
+  "main": "index.js",
+  "name": "rest-handler",
+  "version": "0.0.1",
+  "dependencies": {
+    "take-five": "^1.3.0"
+  }
+}
