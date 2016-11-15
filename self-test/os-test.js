@@ -1,4 +1,4 @@
-var os = require('os');
+const os = require('os');
 
 function getOperatingSystem() {
     return os.type() + ' ' + os.release();

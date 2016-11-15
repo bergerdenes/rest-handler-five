@@ -2,7 +2,7 @@ const http = require('http');
 
 
 const server = http.createServer(function(req, res) {
-    var body = '';
+    let body = '';
     req.on('data', function(data) {
         body += data;
     });

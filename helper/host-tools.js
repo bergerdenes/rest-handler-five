@@ -1,5 +1,5 @@
 function getClientIPv4(socket) {
-    var ip = socket.remoteAddress;
+    let ip = socket.remoteAddress;
     if (socket.remoteFamily === 'IPv6') {
         ip = ip.substring(ip.lastIndexOf(':') + 1); // works only if the IPv4 is appended to ::FFFF:a.b.c.d format
     }
