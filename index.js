@@ -1,36 +1,27 @@
 const five = require('take-five');
 
-const opts = {
-    cors: {
-        origin: 'localhost',
-        methods: ['POST']
-    }
-};
+const logger = require('./lib/logger');
+const errorManager = require('./lib/error-manager');
+const routes = require('./lib/route-manager');
 
-const server = five(opts);
+// take-five has a nice bug in cors.js :( needs monkey patching
+// const opts = {
+//     cors: {
+//         origin: 'localhost',
+//         methods: ['POST']
+//     }
+// };
 
+const server = five();
 
-function getHostName(fullHostName) {
-    let ci = fullHostName.indexOf(':');
-    if (ci == -1) {
-        return fullHostName;
-    }
-
-    return fullHostName.substring(0, ci);
-}
-
-function handleMerge(req, res) {
-    let origin = getHostName(req.headers.host); 
-
-    if (origin !== 'localhost') {
-        res.statusCode = 403;
-        res.end(JSON.stringify({ message: 'wrong origin' }));
-        return;
-    }
-    
-    res.send(req.body);
-}
-
-server.post('/merge', handleMerge);
-
+server.post('/merge', routes.handleMerge);
+server.get('/health', routes.handleHealth);
 server.listen(3000);
+
+process.on('uncaughtException', err => {
+    logger.error('Unhandled exception.');
+    logger.log(err);
+    errorManager.setError(err);
+});
+
+logger.info("Web server started. Listening POST at /merge ...");

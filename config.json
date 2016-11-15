@@ -1,0 +1,18 @@
+{
+  "env": "dev",
+  "logDestination": "screen",
+  "allowedHost": "vmdeneslinux",
+  "sonarApiBaseUrl": "http://sonar.boldchat.io/api",
+  "bitBucketProjectList": [
+    {
+      "name": "SmartDesk",
+      "repositoryMap": [
+        {
+          "bitBucket": "test-repo",
+          "sonarProjectName": "TestRepo",
+          "sonarProjectKey": "my:boltchat"
+        }
+      ]
+    }
+  ]
+}
