@@ -1,6 +1,6 @@
 {
   "main": "index.js",
-  "name": "rest-handler",
+  "name": "bitbucket-action-handler",
   "version": "0.0.1",
   "dependencies": {
     "chalk": "^1.1.3",
