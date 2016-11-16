@@ -24,6 +24,7 @@ It is placed in the `config.json` file, like below.
       }
     ]
   }
+}
 ```
 
 The `port` is where the service listens for HTTP requests.
