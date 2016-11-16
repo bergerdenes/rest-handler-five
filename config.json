@@ -1,8 +1,10 @@
 {
   "env": "dev",
+  "port": 3000,
   "logDestination": "screen",
   "allowedHost": "vmdeneslinux",
   "sonarApiBaseUrl": "http://sonar.boldchat.io/api",
+  "sonarCredentials": "<PASTE BASIC AUTH>",
   "bitBucketProjectList": [
     {
       "name": "SmartDesk",
