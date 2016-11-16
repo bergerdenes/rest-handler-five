@@ -6,24 +6,23 @@ It only checks the branch delete action and tries to delete the matching project
 It is placed in the `config.json` file, like below.
 ```
 {
-    "env": "dev",
-    "port": 3000,
-    "logDestination": "screen",
-    "allowedHost": "localhost",
-    "sonarApiBaseUrl": "http://sonar.boldchat.io/api",
-    "bitBucketProjectList": [
-      {
-        "name": "SmartDesk",
-        "repositoryMap": [
-          {
-            "bitBucket": "test-repo",
-            "sonarProjectName": "TestRepo",
-            "sonarProjectKey": "my:repo"
-          }
-        ]
-      }
-    ]
-  }
+  "env": "dev",
+  "port": 3000,
+  "logDestination": "screen",
+  "allowedHost": "localhost",
+  "sonarApiBaseUrl": "http://sonar.boldchat.io/api",
+  "bitBucketProjectList": [
+    {
+      "name": "SmartDesk",
+      "repositoryMap": [
+        {
+          "bitBucket": "test-repo",
+          "sonarProjectName": "TestRepo",
+          "sonarProjectKey": "my:repo"
+        }
+      ]
+    }
+  ]
 }
 ```
 
