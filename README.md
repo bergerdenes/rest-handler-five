@@ -32,7 +32,8 @@ The calls are only accepted from a specific host, that is determined by reverse 
 The mapping `bitBucketProjectList` maps the BitBucket projects and the repositories inside it to Sonar project names and keys.
 
 ## Credentials
-A separate file `credential.json` needs to be placed to the root of this project.
+A separate file `credential.json` needs to be created on a path where the user running te server process can access it.
+The environment variable `SONAR_ADMIN_CREDENTIALS` has to point to the location of this file. In case this environment variable is missing, the file is searched at the root of the project.
 ```
 {
   "sonarCredentials": "<PLACE BASIC AUTHORIZATION HEADER HERE>"
