@@ -1,17 +1,16 @@
 {
-  "env": "dev",
-  "port": 3000,
+  "env": "live",
+  "port": 1337,
   "logDestination": "screen",
-  "allowedHost": "vmdeneslinux",
+  "allowedHost": "bud-stash02.3amlabs.net",
   "sonarApiBaseUrl": "http://sonar.boldchat.io/api",
-  "sonarCredentials": "<PASTE BASIC AUTH>",
   "bitBucketProjectList": [
     {
-      "name": "SmartDesk",
+      "name": "BoldChat",
       "repositoryMap": [
         {
-          "bitBucket": "test-repo",
-          "sonarProjectName": "TestRepo",
+          "bitBucket": "Bravestorm",
+          "sonarProjectName": "Boldchat",
           "sonarProjectKey": "my:boltchat"
         }
       ]

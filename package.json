@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "chalk": "^1.1.3",
+    "request": "^2.78.0",
     "take-five": "^1.3.0"
   },
   "scripts": {
